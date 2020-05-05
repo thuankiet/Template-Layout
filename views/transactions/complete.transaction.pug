@@ -1,0 +1,14 @@
+extends ../layout/common
+
+block content
+
+  .container
+    h1 Update State
+
+    form(action='/transactions/'+transaction.id+'/complete', method='POST')
+      label Choose status:
+        select(name='status' class='form-control')
+          option None
+          option Complete
+        br
+        button(type='submit' class='btn btn-primary') Update
